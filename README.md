@@ -6,7 +6,7 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.filters import CommandStart
 
 # TOKENingizni shu yerga qo'ying
-TOKEN = "7410896864:AAG8gkew8R_VkuoFPkH-ONmvG_PjdGS8100"
+TOKEN = "telegram bot token"
 wikipedia.set_lang('uz')
 # Botni yaratish
 bot = Bot(token=TOKEN)
@@ -19,7 +19,7 @@ dp = Dispatcher()
 # /start komandasi uchun handler
 @dp.message(CommandStart())
 async def start_handler(message: types.Message):
-    await message.answer(f"Salom, {message.from_user.first_name}! Artur akamni botiga hush kelibsiz.")
+    await message.answer(f"Salom, {message.from_user.first_name}! wikipedia botiga hush kelibsiz.")
 
 # Oddiy echo handler - bot kelgan xabarni qaytaradi
 @dp.message()
